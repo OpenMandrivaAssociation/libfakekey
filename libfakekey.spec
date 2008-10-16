@@ -5,7 +5,7 @@
 
 Name:           libfakekey
 Version:        0.1
-Release:        %mkrel 3.5
+Release:        %mkrel 3.5.1
 Summary:        Converting characters to X key-presses
 
 Group:          System/Libraries
@@ -33,7 +33,7 @@ libfakekey is a simple library for converting UTF-8 characters into
 
 %package        -n %develname
 Summary:        Development files for %{name}
-Group:          Development/Libraries
+Group:          Development/C
 Requires:       %libname
 Requires:       pkgconfig
 
