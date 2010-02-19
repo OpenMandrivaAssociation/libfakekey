@@ -13,11 +13,8 @@ License:        LGPLv2+
 URL:            http://projects.o-hand.com/matchbox/
 Source0:        http://matchbox-project.org/sources/libfakekey/0.1/%{name}-%{version}.tar.bz2
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-
 BuildRequires:  libxtst-devel
-BuildRequires:  X11-devel
 BuildRequires:  libx11-devel
-BuildRequires:  libxi-devel
 
 %description
 libfakekey is a simple library for converting UTF-8 characters into
@@ -45,11 +42,9 @@ developing applications that use %{name}.
 %prep
 %setup -q
 
-
 %build
-%configure --disable-static
+%configure2_5x --disable-static
 %make
-
 
 %install
 rm -rf $RPM_BUILD_ROOT
