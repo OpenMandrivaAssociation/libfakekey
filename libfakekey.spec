@@ -5,7 +5,7 @@
 
 Name:           libfakekey
 Version:        0.1
-Release:        %mkrel 3.5.2
+Release:        %mkrel 3.5.3
 Summary:        Converting characters to X key-presses
 
 Group:          System/Libraries
