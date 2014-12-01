@@ -1,39 +1,38 @@
-%define major	0
-%define oname	fakekey
-%define libname	%mklibname %{oname} %{major}
-%define devname	%mklibname -d %{oname}
+%define major 0
+%define oname fakekey
+%define libname %mklibname %{oname} %{major}
+%define devname %mklibname -d %{oname}
 
-Summary:        Converting characters to X key-presses
-Name:           libfakekey
-Version:        0.1
-Release:        5
-
-Group:          System/Libraries
-License:        LGPLv2+
-URL:            http://projects.o-hand.com/matchbox/
-Source0:        http://matchbox-project.org/sources/libfakekey/0.1/%{name}-%{version}.tar.bz2
-BuildRequires:  pkgconfig(xtst)
-BuildRequires:  pkgconfig(x11)
-BuildRequires:  pkgconfig(xi)
+Summary:		Converting characters to X key-presses
+Name:			libfakekey
+Version:		0.1
+Release:		6
+Group:			System/Libraries
+License:		LGPLv2+
+URL:			http://projects.o-hand.com/matchbox/
+Source0:		http://matchbox-project.org/sources/libfakekey/0.1/%{name}-%{version}.tar.bz2
+BuildRequires:	pkgconfig(xtst)
+BuildRequires:	pkgconfig(x11)
+BuildRequires:	pkgconfig(xi)
 
 %description
 libfakekey is a simple library for converting UTF-8 characters into
 'fake' X key-presses.
 
-%package        -n %{libname}
-Summary:        Converting characters to X key-presses
-Group:          System/Libraries
+%package -n %{libname}
+Summary:		Converting characters to X key-presses
+Group:			System/Libraries
 
-%description    -n %{libname}
+%description -n %{libname}
 libfakekey is a simple library for converting UTF-8 characters into
 'fake' X key-presses.
 
-%package        -n %{devname}
-Summary:        Development files for %{name}
-Group:          Development/C
-Requires:       %{libname}
+%package -n %{devname}
+Summary:		Development files for %{name}
+Group:			Development/C
+Requires:		%{libname} = %{EVRD}
 
-%description    -n %{devname}
+%description -n %{devname}
 The %{name}-devel package contains libraries and header files for
 developing applications that use %{name}.
 
@@ -42,7 +41,7 @@ developing applications that use %{name}.
 
 %build
 export LDFLAGS="-lX11 -lXtst -lXi"
-%configure2_5x \
+%configure \
 	--disable-static
 
 %make
@@ -51,10 +50,10 @@ export LDFLAGS="-lX11 -lXtst -lXi"
 %makeinstall_std
 
 %files -n %{libname}
-%doc COPYING
 %{_libdir}/libfakekey.so.%{major}*
 
 %files -n %{devname}
+%doc COPYING
 %{_includedir}/fakekey/
 %{_libdir}/libfakekey.so
 %{_libdir}/pkgconfig/libfakekey.pc
