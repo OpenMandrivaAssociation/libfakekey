@@ -11,9 +11,9 @@ Group:			System/Libraries
 License:		LGPLv2+
 URL:			http://projects.o-hand.com/matchbox/
 Source0:		http://matchbox-project.org/sources/libfakekey/0.1/%{name}-%{version}.tar.bz2
-BuildRequires:	pkgconfig(xtst)
-BuildRequires:	pkgconfig(x11)
-BuildRequires:	pkgconfig(xi)
+BuildRequires:		pkgconfig(xtst)
+BuildRequires:		pkgconfig(x11)
+BuildRequires:		pkgconfig(xi)
 
 %description
 libfakekey is a simple library for converting UTF-8 characters into
