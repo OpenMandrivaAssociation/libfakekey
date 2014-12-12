@@ -40,7 +40,8 @@ developing applications that use %{name}.
 %setup -q
 
 %build
-export LDFLAGS="-lX11 -lXtst -lXi"
+%global ldflags %{ldflags} -lX11 -lXtst -lXi
+
 %configure \
 	--disable-static
 
