@@ -11,6 +11,7 @@ Group:			System/Libraries
 License:		LGPLv2+
 URL:			http://projects.o-hand.com/matchbox/
 Source0:		http://matchbox-project.org/sources/libfakekey/0.1/%{name}-%{version}.tar.bz2
+Patch0:			libfakekey-0.1-ac.patch
 BuildRequires:		pkgconfig(xtst)
 BuildRequires:		pkgconfig(x11)
 BuildRequires:		pkgconfig(xi)
@@ -38,6 +39,7 @@ developing applications that use %{name}.
 
 %prep
 %setup -q
+%apply_patches
 
 %build
 sed -i -e 's/^fakekey_test_LDADD=/fakekey_test_LDADD=-lX11 /' tests/Makefile.am
