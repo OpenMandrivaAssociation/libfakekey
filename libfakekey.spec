@@ -40,10 +40,13 @@ developing applications that use %{name}.
 %setup -q
 
 %build
-%global ldflags %{ldflags} -lX11 -lXtst -lXi
+sed -i -e 's/^fakekey_test_LDADD=/fakekey_test_LDADD=-lX11 /' tests/Makefile.am
+sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac
+
+autoreconf -fiv
 
 %configure \
-	--disable-static
+	--with-x
 
 %make
 
