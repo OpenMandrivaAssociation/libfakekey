@@ -39,7 +39,7 @@ developing applications that use %{name}.
 
 %prep
 %setup -q
-%apply_patches
+%patch0 -p0
 
 %build
 sed -i -e 's/^fakekey_test_LDADD=/fakekey_test_LDADD=-lX11 /' tests/Makefile.am
