@@ -15,6 +15,7 @@ Patch0:			libfakekey-0.1-ac.patch
 BuildRequires:		pkgconfig(xtst)
 BuildRequires:		pkgconfig(x11)
 BuildRequires:		pkgconfig(xi)
+BuildRequires:		pkgconfig(xfixes)
 
 %description
 libfakekey is a simple library for converting UTF-8 characters into
