@@ -6,11 +6,11 @@
 Summary:		Converting characters to X key-presses
 Name:			libfakekey
 Version:		0.1
-Release:		12
+Release:		13
 Group:			System/Libraries
 License:		LGPLv2+
-URL:			http://projects.o-hand.com/matchbox/
-Source0:		http://matchbox-project.org/sources/libfakekey/0.1/%{name}-%{version}.tar.bz2
+URL:			https://www.yoctoproject.org/tools-resources/projects/matchbox
+Source0:		http://downloads.yoctoproject.org/releases/matchbox/libfakekey/0.1/%{name}-%{version}.tar.bz2
 Patch0:			libfakekey-0.1-ac.patch
 BuildRequires:		pkgconfig(xtst)
 BuildRequires:		pkgconfig(x11)
