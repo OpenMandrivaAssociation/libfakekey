@@ -5,12 +5,12 @@
 
 Summary:		Converting characters to X key-presses
 Name:			libfakekey
-Version:		0.1
-Release:		13
+Version:		0.3
+Release:		1
 Group:			System/Libraries
 License:		LGPLv2+
 URL:			https://www.yoctoproject.org/tools-resources/projects/matchbox
-Source0:		http://downloads.yoctoproject.org/releases/matchbox/libfakekey/0.1/%{name}-%{version}.tar.bz2
+Source0:		https://github.com/veyon/libfakekey/archive/refs/tags/%{version}/%{name}-%{version}.tar.gz
 Patch0:			libfakekey-0.1-ac.patch
 BuildRequires:		pkgconfig(xtst)
 BuildRequires:		pkgconfig(x11)
