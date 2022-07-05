@@ -11,7 +11,7 @@ Group:			System/Libraries
 License:		LGPLv2+
 URL:			https://www.yoctoproject.org/tools-resources/projects/matchbox
 Source0:		https://github.com/veyon/libfakekey/archive/refs/tags/%{version}/%{name}-%{version}.tar.gz
-Patch0:			libfakekey-0.1-ac.patch
+#Patch0:			libfakekey-0.1-ac.patch
 BuildRequires:		pkgconfig(xtst)
 BuildRequires:		pkgconfig(x11)
 BuildRequires:		pkgconfig(xi)
@@ -40,7 +40,7 @@ developing applications that use %{name}.
 
 %prep
 %setup -q
-%patch0 -p0
+#patch0 -p0
 
 %build
 sed -i -e 's/^fakekey_test_LDADD=/fakekey_test_LDADD=-lX11 /' tests/Makefile.am
