@@ -6,7 +6,7 @@
 Summary:		Converting characters to X key-presses
 Name:			libfakekey
 Version:		0.3
-Release:		1
+Release:		2
 Group:			System/Libraries
 License:		LGPLv2+
 URL:			https://www.yoctoproject.org/tools-resources/projects/matchbox
