@@ -12,6 +12,11 @@ License:		LGPLv2+
 URL:			https://www.yoctoproject.org/tools-resources/projects/matchbox
 Source0:		https://github.com/veyon/libfakekey/archive/refs/tags/%{version}/%{name}-%{version}.tar.gz
 #Patch0:			libfakekey-0.1-ac.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:		pkgconfig(xtst)
 BuildRequires:		pkgconfig(x11)
 BuildRequires:		pkgconfig(xi)
